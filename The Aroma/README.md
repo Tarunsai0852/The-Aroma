@@ -1,11 +1,33 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a Vite-powered React SPA that delivers a guided recipe experience, user authentication flows, and a lightweight content studio for managing homepage copy without redeploying.
 
-Currently, two official plugins are available:
+## Step-by-step guide
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Install dependencies**  
+   ```bash
+   cd "C:\_my-projects\The Aroma\The Aroma"
+   npm install
+   ```
+
+2. **Start the dev server with hot reload**  
+   ```bash
+   npm run dev -- --host
+   ```
+   Visit `http://localhost:5173` (or the printed dev URL) to explore the dashboard, planner, and recipe flows.
+
+3. **Preview or build for production**  
+   ```bash
+   npm run build
+   npm run preview
+   ```
+   Use the preview command to verify the production bundle locally before deploying.
+
+4. **Work with environment secrets**  
+   Copy `.env.example` to `.env` if needed, then set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` so Supabase-powered features (recipe saving, user management) activate.
+
+5. **Launch the Content Studio (CMS)**  
+   Navigate to `http://localhost:5173/cms` to open the Content Studio page, where you can add/edit hero sections, announcements, and other evergreen copy. Entries are persisted locally via `localStorage` for quick prototyping.
 
 ## Expanding the ESLint configuration
 
